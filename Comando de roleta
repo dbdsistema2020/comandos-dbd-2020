@@ -1,0 +1,18 @@
+
+$textSplit[$message;] 
+
+$setUserVar[money;$randomText[sub;sum;sub;sub][$getUserVar[money;$authorID];$message;$authorID]
+
+$title[ 🎰 | Roleta]
+$color[00ffff]
+$description[↘️========↙️
+⠀⠀$replaceText[$replaceText[$randomText[sub;sum;sub;sub];sum;$randomText[🍓-🍓-🍓;🍑-🍑-🍑;🍈-🍈-🍈;🍒-🍒-🍒;🍋🍋🍋;🍊-🍊-🍊];1];sub;$randomText[🍊-🍒-🍋;🍈-🍓-🍒;🍑-🍒-🍊;🍋-🍓-🍈;🍑-🍓-🍓;🍈-🍑-🍊];1] 
+↗️========↖️
+**$username você $replaceText[$replaceText[$randomText[sub;sum;sub;sub];sum;ganhou $message Moedas!;1];sub;vc perdeu $message moedas!;1]**]
+
+$onlyIf[$message!=;> ❌ Por favor ponha o valor!]
+
+$onlyIf[$splitText[6]==;> ❌ máximo que você pode apostar e 999999 Moedas!]
+
+$onlyIf[$message<$getUserVar[money;$authorID];> ❌ falta dinheiro. $message/$getUserVar[money;$authorID]]
+$globalCooldown[2m; <@$authorID> esperere %time% para apostar de novo!]
